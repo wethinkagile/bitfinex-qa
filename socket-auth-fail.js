@@ -21,7 +21,7 @@ w.on('message', (msg) => {
     } else if (msg.event == 'auth') {
 
         assert.equal(msg.status, 'FAILED', 'Auth Status must FAIL');
-        console.log('\x1b[42m%s\x1b[0m', 'OK. Auth Status FAILED Received. Press Ctrl/Cmd-C to Exit.');
+        console.log('\x1b[42m%s\x1b[0m', 'OK. Auth Status FAILED Received. Ctrl/Cmd-C to Exit.');
 
     }
 

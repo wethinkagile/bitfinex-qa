@@ -12,6 +12,16 @@
 $ npm install
 ```
 
+
+## Authentication
+
+Make sure to provide a valid BitFinex API Key and Secret pair as environment variable with, e.g.
+
+```
+export API_KEY=<FinexApiKey>
+export SECRET=<FinexApiSecret>
+```
+
 ## Execute Tests
 
 Available Tests:
@@ -39,15 +49,6 @@ Test failures will be thrown, otherwise an aggregate successful report will look
 OK. Trades Array Length and Types valid.
 ```
 
-## Authentication
-
-Make sure to provide a valid BitFinex API Key and Secret pair as environment variable with, e.g.
-
-```
-export API_KEY=<FinexApiKey>
-export SECRET=<FinexApiSecret>
-```
-
 ## Log
 
 * Write ReadMe [YES]
@@ -59,7 +60,8 @@ export SECRET=<FinexApiSecret>
 * Remove all hard-coded Secrets and URLs from Sources [YES]
 * Test-Run, Code Readability and README update [YES]
 * Test-Run and Quick File Format [YES]
+* ToDo: *socket-auth-success* test, consult with BitFinex/Node Community about minor issue in https://docs.bitfinex.com/v2/docs/ws-auth [OPEN]
 
 ## License
 
-MIT © 2019 by Meshfields
+MIT © 2019 by Meshfields, Stephan Kristyn, contact me at steve@meshfields.de

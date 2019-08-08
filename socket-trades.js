@@ -24,7 +24,7 @@ w.on('message', (msg) => {
         assert.typeOf(msg[2][2], 'Number', 'Must be Type of Number');
         assert.typeOf(msg[2][3], 'Number', 'Must be Type of Number');
 
-        console.log('\x1b[42m%s\x1b[0m', 'OK. Trades Array Length and Types valid. Press Ctrl/Cmd-C to Abort.');
+        console.log('\x1b[42m%s\x1b[0m', 'OK. Trades Array Length and Types valid. Ctrl/Cmd-C to Abort.');
     }
 });
 
