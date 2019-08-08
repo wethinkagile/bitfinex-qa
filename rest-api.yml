@@ -1,0 +1,20 @@
+config:
+  target: 'https://api-pub.bitfinex.com/v2'
+  phases:
+    - duration: 1
+      arrivalRate: 1
+  processor: "./qa-functions.js"
+scenarios:
+  - flow:
+    - get:
+        url: "/platform/status"
+        beforeRequest: "setJSONBody"
+        afterResponse: "platformStatus"
+    - get:
+        url: "/tickers/?symbols=tBTCUSD"
+        beforeRequest: "setJSONBody"
+        afterResponse: "tickersTrading"
+    - get:
+        url: "/tickers/?symbols=fBTC"
+        beforeRequest: "setJSONBody"
+        afterResponse: "tickersFunding"

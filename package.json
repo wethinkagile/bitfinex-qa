@@ -1,0 +1,28 @@
+{
+  "name": "bitfinex-qa",
+  "version": "1.0.0",
+  "description": "Quick Demo of Testing BitFinex APIs with Node.JS",
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "chai": "^4.2.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meshfields/qa-bitfinex.git"
+  },
+  "keywords": [
+    "testing",
+    "tdd",
+    "javascript"
+  ],
+  "author": "Stephan Kristyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meshfields/qa-bitfinex/issues"
+  },
+  "homepage": "https://github.com/meshfields/qa-bitfinex#readme"
+}
