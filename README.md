@@ -43,13 +43,17 @@ $ node <testName>.js
 
 ## Reporting
 
-Test failures will be thrown, otherwise an aggregate successful report will look similar to this:
+Test failures will be thrown, otherwise a small report will appear, looking similar to this:
 
 ```                 
 OK. Trades Array Length and Types valid.
 ```
 
-## Self-Tests
+## Integration Tests
+
+In case it doesn't work on your machine.
+
+https://travis-ci.org/meshfields/bitfinex-qa
 
 ## Docker
 
