@@ -49,6 +49,16 @@ Test failures will be thrown, otherwise an aggregate successful report will look
 OK. Trades Array Length and Types valid.
 ```
 
+## Self-Tests
+
+## Docker
+
+This microservice can be pulled in from [Dockerhub](https://hub.docker.com/r/meshfields/bitfinex-qa) with
+
+`docker pull meshfields/bitfinex-qa`
+
+*Smoke Test* to be launched with `npm test`.
+
 ## Log
 
 * Write ReadMe [YES]
