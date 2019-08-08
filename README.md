@@ -24,7 +24,8 @@ $ npm install -g artillery
 ## Execute Tests
 
 ```
-$ artillery run rest-apis.yml
+$ export set DEBUG=http,http:capture,http:response  // Optional
+$ artillery run auth-api.yml
 ```
 
 ## Reporting
