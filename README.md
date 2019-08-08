@@ -14,11 +14,6 @@
 * Test Rate Limits success and fail
 * Test 3 Websocket Endpoints
 
-## Possible Bugs found
-
-v2/tickers - Bid Price is not a Float.
-
-
 ## Setup
 
 ```bash
