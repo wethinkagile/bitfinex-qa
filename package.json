@@ -8,7 +8,7 @@
     "chai": "^4.2.0"
   },
   "scripts": {
-    "test": "node rest-pub.js"
+    "test": "node rest-ticker.js"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,18 @@
+sudo: "required"
+language: "node_js"
+node_js:
+  - "stable"
+services:
+  - "docker"
+before_install:
+  - docker build -t meshfields/bitfinex-qa .
+  - docker run -d -p 127.0.0.1:80:4567 meshfields/bitfinex-qa /bin/sh -c "cd /root/bitfinex-qa; npm start;"
+  - docker ps -a
+  - docker run meshfields/bitfinex-qa /bin/sh -c "cd /root/meshfields; npm test"
+script:
+  - npm test
+deploy:
+  provider: script
+  script: bash docker_push.sh
+  on:
+    branch: master
