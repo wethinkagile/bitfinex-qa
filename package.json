@@ -4,11 +4,12 @@
   "description": "Quick Demo of Testing BitFinex APIs with Node.JS",
   "main": "index.js",
   "devDependencies": {
-    "mocha": "^6.2.0",
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.1",
+    "mocha": "^6.2.0"
   },
   "scripts": {
-    "test": "node rest-ticker.js"
+    "test": "concurrently 'node rest-ticker.js'"
   },
   "repository": {
     "type": "git",
