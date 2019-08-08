@@ -6,26 +6,29 @@
 [![HitCount](http://hits.dwyl.io/meshfields/bitfinex-qa.svg)](http://hits.dwyl.io/meshfields/bitfinex-qa) 
 [![Greenkeeper badge](https://badges.greenkeeper.io/meshfields/bitfinex-qa.svg)](https://greenkeeper.io/) 
 
-## RoadMap
-
-* Write ReadMe
-* Code Float Int Distinguisher, -> there seem to be bugs in Chai Lib, postponed
-* Test 2 more Endpoints from different REST API
-* Test Rate Limits success and fail
-* Test 3 Websocket Endpoints
-
 ## Setup
 
 ```bash
 $ npm install
-$ npm install -g artillery
 ```
 
 ## Execute Tests
 
+Available Tests:
+
 ```
-$ export set DEBUG=http,http:capture,http:response  // Optional
-$ artillery run auth-api.yml
+[
+    rest-ticker, 
+    rest-orders,
+    rest-positions,
+    socket-ticker,
+    socket-trades,
+    socket-auth-fail
+]
+```
+
+```
+$ node <testName>.js
 ```
 
 ## Reporting
@@ -33,61 +36,30 @@ $ artillery run auth-api.yml
 Test failures will be thrown, otherwise an aggregate successful report will look similar to this:
 
 ```                 
-   Complete report @ 2019-01-02T17:32:36.653Z
-     Scenarios launched:  300
-     Scenarios completed: 300
-     Requests completed:  600
-     RPS sent: 18.86
-     Request latency:
-       min: 52.1
-       max: 11005.7
-       median: 408.2
-       p95: 1727.4
-       p99: 3144
-     Scenario counts:
-       0: 300 (100%)
-     Codes:
-       200: 300
-       302: 300
+OK. Trades Array Length and Types valid.
 ```
-
-## Modes
-
-### Test REST APIs
-
-```
-$ artillery run rest-api.yml
-```
-
-### Test Websockets
-
-```
-$ artillery run websocket.yml
-```
-
-### Rate Limit Tester
-
-```
-$ artillery run rate-limit.yml
-```
-
-
-## Docker
-
-This microservice can be pulled in from [Dockerhub](https://hub.docker.com/r/meshfields/bitfinex-qa) with
-
-`docker pull meshfields/bitfinex-qa`
-
-*Prod mode* to be launched with `NODE_ENV=production npm start`.
 
 ## Authentication
 
-Make sure to send a bearer token along in the header to get authenticate against Auth0.
+Make sure to provide a valid BitFinex API Key and Secret pair as environment variable with, e.g.
 
 ```
-curl --request GET --url 'http://localhost:3001/default/pods' --header 'authorization: Bearer {BEARER}' --header 'content-type: application/json'
+export API_KEY=<FinexApiKey>
+export SECRET=<FinexApiSecret>
 ```
+
+## Log
+
+* Write ReadMe [YES]
+* Float Int Distinguisher, -> consult with Chai Lib Community, postponed [NO]
+* Test 2 more Endpoints from different REST API [YES]
+* Test Rate Limits success and fail -> ArtilleryIO failed to succeed with Finex' Auth Method [NO]
+* Test 3 Websocket Endpoints [YES]
+* Re-Architecture from Artillery to vanilla NodeJS [YES]
+* Remove all hard-coded Secrets and URLs from Sources [YES]
+* Test-Run, Code Readability and README update [YES]
+* Test-Run and Quick File Format [YES]
 
 ## License
 
-MIT © 2018 by Meshfields
+MIT © 2019 by Meshfields
