@@ -76,7 +76,7 @@ This microservice can be pulled in from [Dockerhub](https://hub.docker.com/r/mes
 
 ### 1.0.0
 * Created ReadMe
-* Problem with Float/Int in Chai, test for String and Number Types instead for PoC
+* Problem with Float/Int in Chai, test for String and Number Types instead for PoC.
 * Wrote more Endpoint tests against different REST API 
 * Rate Limit Tests failed since ArtilleryIO failed with Finex Auth Methods
 
@@ -90,6 +90,11 @@ This microservice can be pulled in from [Dockerhub](https://hub.docker.com/r/mes
 ### 1.2.0
 * Added socket-get-orders.js for successful socket auth and play around with BFX library 
 * Added *npm start* shorthand to execute all tests concurrently.
+
+### upcoming releases 
+#### 1.3.0
+* Further enhance DRY and OOP
+
 
 ## License
 
