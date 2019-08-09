@@ -8,9 +8,9 @@ before_install:
   - docker build -t meshfields/bitfinex-qa .
   - docker run -d -p 127.0.0.1:80:4567 meshfields/bitfinex-qa /bin/sh -c "cd /root/bitfinex-qa; npm test;"
   - docker ps -a
-  - docker run meshfields/bitfinex-qa /bin/sh -c "cd /root/meshfields; npm test"
+  - docker run meshfields/bitfinex-qa /bin/sh -c "cd /root/meshfields; npm start"
 script:
-  - npm test
+  - npm start
 deploy:
   provider: script
   script: bash docker_push.sh
