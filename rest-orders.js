@@ -42,7 +42,7 @@ request.post(options, (error, response, body) => {
 
         console.log('\x1b[42m%s\x1b[0m', 'OK. Orders Array Length and Sample Types are valid.');
     } else {
-        console.log('\x1b[43m%s\x1b[0m', 'SKIPPED. You dont seem to have any orders.');
+        console.log('\x1b[47m%s\x1b[0m', 'SKIPPED. You dont seem to have any orders.');
     }
 
 

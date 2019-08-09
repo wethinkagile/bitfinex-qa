@@ -12,7 +12,7 @@ w.on('message', (msg) => {
     if (msg.event) {
 
         assert.typeOf(msg.event, 'String', 'Must be String');
-        console.log('\x1b[42m%s\x1b[0m', 'OK. Ticker Event Subscribe.');
+        console.log('\x1b[42m%s\x1b[0m', 'OK. Event Received.');
 
     } else if (msg[1] !== 'hb') {
 
@@ -32,6 +32,8 @@ w.on('message', (msg) => {
         assert.typeOf(msg[1][9], 'Number', 'Must be a Number');
 
         console.log('\x1b[42m%s\x1b[0m', 'OK. Ticker Array Length and Types valid.');
+
+        w.close();
     }
 
 });

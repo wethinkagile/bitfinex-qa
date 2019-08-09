@@ -12,7 +12,7 @@ w.on('message', (msg) => {
     if (msg.event) {
 
         assert.typeOf(msg.event, 'String', 'Must be String');
-        console.log('\x1b[42m%s\x1b[0m', 'OK. Socket Event Trades Subscribe.');
+        console.log('\x1b[42m%s\x1b[0m', 'OK. Event Received.');
 
     } else if (msg[1] === 'te' || msg[1] === 'tu') {
 
@@ -24,8 +24,13 @@ w.on('message', (msg) => {
         assert.typeOf(msg[2][2], 'Number', 'Must be Type of Number');
         assert.typeOf(msg[2][3], 'Number', 'Must be Type of Number');
 
-        console.log('\x1b[42m%s\x1b[0m', 'OK. Trades Array Length and Types valid. Ctrl/Cmd-C to Abort.');
+        console.log('\x1b[42m%s\x1b[0m', 'OK. Trades Array Length and Types valid.');
+
+        w.close();
     }
+
+
+
 });
 
 let msg = JSON.stringify({

@@ -1,6 +1,6 @@
 {
   "name": "bitfinex-qa",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Quick Demo of Testing BitFinex APIs with Node.JS",
   "main": "index.js",
   "devDependencies": {
@@ -9,7 +9,8 @@
     "mocha": "^6.2.0"
   },
   "scripts": {
-    "test": "concurrently 'node rest-ticker.js'"
+    "test": "node rest-ticker.js",
+    "start": "concurrently 'node rest-ticker.js' 'node rest-orders.js' 'node rest-positions.js' 'node socket-get-orders.js' 'node socket-trades.js' 'node socket-ticker.js'"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/meshfields/qa-bitfinex#readme",
   "dependencies": {
+    "bitfinex-api-node": "^2.0.8",
     "request": "^2.88.0",
     "ws": "^7.1.1"
   }

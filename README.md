@@ -24,6 +24,8 @@ export SECRET=<FinexApiSecret>
 
 ## Execute Tests
 
+### Run Single Tests
+
 Available Tests:
 
 ```
@@ -34,11 +36,18 @@ Available Tests:
     socket-ticker,
     socket-trades,
     socket-auth-fail
+    socket-get-orders
 ]
 ```
 
 ```
 $ node <testName>.js
+```
+
+### Run All Tests 
+
+```
+$ npm start
 ```
 
 ## Reporting
@@ -55,7 +64,7 @@ In case it doesn't work on your machine.
 
 https://travis-ci.org/meshfields/bitfinex-qa
 
-## Docker
+## Docker Image
 
 This microservice can be pulled in from [Dockerhub](https://hub.docker.com/r/meshfields/bitfinex-qa) with
 
@@ -63,18 +72,24 @@ This microservice can be pulled in from [Dockerhub](https://hub.docker.com/r/mes
 
 *Smoke Test* to be launched with `npm test`.
 
-## Log
+## Version Log
 
-* Write ReadMe [YES]
-* Float Int Distinguisher, -> consult with Chai Lib Community, postponed [NO]
-* Test 2 more Endpoints from different REST API [YES]
-* Test Rate Limits success and fail -> ArtilleryIO failed to succeed with Finex' Auth Method [NO]
-* Test 3 Websocket Endpoints [YES]
-* Re-Architecture from Artillery to vanilla NodeJS [YES]
-* Remove all hard-coded Secrets and URLs from Sources [YES]
-* Test-Run, Code Readability and README update [YES]
-* Test-Run and Quick File Format [YES]
-* ToDo: *socket-auth-success* test, consult with BitFinex/Node Community about minor issue in https://docs.bitfinex.com/v2/docs/ws-auth [OPEN]
+### 1.0.0
+* Created ReadMe
+* Problem with Float/Int in Chai, test for String and Number Types instead for PoC
+* Wrote more Endpoint tests against different REST API 
+* Rate Limit Tests failed since ArtilleryIO failed with Finex Auth Methods
+
+### 1.1.0
+* Re-Architecture from Artillery to vanilla NodeJS 
+* Wrote the remaining Websocket and Rest Endpoints tests
+* Removed all hard-coded Secrets and URLs from Sources
+* Set up ci/cd pipeline for automated testing. Code Readability and README Update
+* Refactored for re-usable Config Parameters
+
+### 1.2.0
+* Added socket-get-orders.js for successful socket auth and play around with BFX library 
+* Added *npm start* shorthand to execute all tests concurrently.
 
 ## License
 
