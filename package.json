@@ -29,7 +29,7 @@
   "homepage": "https://github.com/meshfields/qa-bitfinex#readme",
   "dependencies": {
     "bitfinex-api-node": "^2.0.8",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "ws": "^7.1.1"
   }
 }
