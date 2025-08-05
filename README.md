@@ -98,4 +98,4 @@ This microservice can be pulled in from [Dockerhub](https://hub.docker.com/r/mes
 
 ## License
 
-MIT © 2019 by Meshfields, Stephan Kristyn, contact me at steve@meshfields.de
+MIT © 2019 by Cloudscape Germany, Stephan Kristyn
